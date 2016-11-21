@@ -15,7 +15,7 @@
 # - - - - 8 1 - - -
 # - - 2 - - - - 5 -
 # - 4 - - - - 3 - -
-def parse_matrix_from_file(filename):
+def parse_board_from_file(filename):
     f = open(filename, 'r')
     matrix = [[0 for x in range(0,9)] for y in range(0,9)]
     for x in range(0,9):

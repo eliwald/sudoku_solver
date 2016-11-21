@@ -1,3 +1,4 @@
+# A class representing a single square in
 class BoardSquare(object):
     # The default number we use if the number for a given square hasn't
     # been set yet
