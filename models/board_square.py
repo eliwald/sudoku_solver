@@ -1,28 +1,25 @@
-# A class representing a single square in
+# A class representing a single square in a Sudoku board. Each Square
+# contains it's row and column. It also contains it's number if it's
+# been set, and a list that can be filled with possible numbers for
+# this square if it's number hasn't been set.
 class BoardSquare(object):
     # The default number we use if the number for a given square hasn't
-    # been set yet
+    # been set yet.
     default_num = 0
 
     def __init__(self, row, col):
-        # Initialize the square at this row and column
         self.row = row
         self.col = col
-
-        # Initialize the number at this index to be the default (which
-        # indicates that we don't know what number goes here yet)
         self.num = BoardSquare.default_num
-
-        # Initialize the helper data structures that we'll use to keep
-        # track of what numbers may go here
         self.possible_nums = []
 
-    # Used when sorting BoardSquares in a heap in the solver. A
-    # BoardSquare will be less than another BoardSquare if it has
+    # Used when sorting BoardSquares in a heap in SudokuBoard.solve. A
+    # BoardSquare is "less than"" another BoardSquare if it has
     # fewer possible numbers that can be put in it.
     def __lt__(self, other):
         return len(self.possible_nums) < len(other.possible_nums)
 
+    # Prints the state of a BoardSquare (for debugging purposes)
     def __str__(self):
         board_square_str = "%d, %d: " % (self.row, self.col)
         if self.num == BoardSquare.default_num:
