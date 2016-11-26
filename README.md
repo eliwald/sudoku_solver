@@ -4,7 +4,7 @@ python main.py path-to-sudoku-puzzle.txt
 
 Example sudoku puzzle input file:
 
-- - - 7 - - - - -
+\- \- \- 7 \- \- \- \- \-
 1 - - - - - - - -
 - - - 4 3 - 2 - -
 - - - - - - - - 6
