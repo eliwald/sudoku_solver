@@ -14,7 +14,7 @@ Example sudoku puzzle input file:
 \- \- 2 \- \- \- \- 5 \-  
 \- 4 \- \- \- \- 3 \- \-  
 
-Alternatively, if you'd like to include the SudokuBoard class in your
+Alternatively, if you'd like to include the `SudokuBoard` class in your
 own application, just use the `models` module:
 
 ```python
